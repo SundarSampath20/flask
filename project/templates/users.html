@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Purchase Details</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  th {
+    text-align: left;
+    background-color: #ddd;
+  }
+  
+  td {
+    text-align: right;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  .purchase-amount {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  </style>
+  
+</head>
+<body>
+<h1>Purchase Details</h1>
+<h3>purchase amount is :{{msg}}</h3>
+<table>
+  <tr>
+    <th>Item</th>
+    <th>TimeStamp</th>
+    <th>Quantity</th>
+    <th>Rate</th>
+    <th>Amount</th>
+  </tr>
+{% for purchase in purchase %}
+  <tr>
+    <td>{{ purchase.item }}</td>
+    <td>{{purchase.timestamp}}</td>
+    <td>{{ purchase.qty }}</td>
+    <td>{{ purchase.rate }}</td>
+    <td>{{ purchase.amount }}</td>
+  </tr>
+{% endfor %}
+<br>
+</table>
+</body>
+</html>

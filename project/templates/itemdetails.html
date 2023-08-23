@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Purchase Details</title>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    
+    th {
+      text-align: left;
+      background-color: #ddd;
+    }
+    
+    td {
+      text-align: right;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    </style>
+    
+</head>
+<body>
+<h1>item Details</h1>
+
+<table>
+  <tr>
+    <th>item</th>
+    <th>qty</th>
+  </tr>
+{% for it in item %}
+  <tr>
+    <td>{{it.item}}</td>
+    <td>{{it.qty}}</td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>
