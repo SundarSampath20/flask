@@ -1,0 +1,48 @@
+
+Database:
+
+use demo;
+
+
+Company Table:
+
+CREATE TABLE `compay` (
+  `campanyname` varchar(45) DEFAULT NULL,
+  `cash` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+ 
+
+Insert:
+
+INSERT INTO `compay` (`campanyname`, `cash`) VALUES
+('Namma Kaddai', 1000);
+
+
+Items Table:
+
+CREATE TABLE `item` (
+  `item` varchar(40) DEFAULT NULL,
+  `qty` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+Purchase Table:
+
+CREATE TABLE `purchase` (
+  `item` varchar(20) DEFAULT NULL,
+  `timestamp` timestamp NULL DEFAULT current_timestamp(),
+  `qty` int(11) DEFAULT NULL,
+  `rate` int(11) DEFAULT NULL,
+  `amount` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+Sales Table:
+
+CREATE TABLE `sales` (
+  `item` varchar(24) DEFAULT NULL,
+  `timestamp` timestamp NULL DEFAULT current_timestamp(),
+  `qty` int(11) DEFAULT NULL,
+  `rate` int(11) DEFAULT NULL,
+  `amount` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+COMMIT;
